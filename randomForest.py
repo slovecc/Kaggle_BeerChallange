@@ -83,12 +83,12 @@ def random_Forest(X_train, X_test, y_train, y_test):
 
     evaluate(random_forest, X_test, y_test)
 
-    ##unisci test and train
+    ##join test and train
     X_all= X_train.append(X_test)
     y_all =y_train.append(y_test)
     random_forest=random_forest.fit(X_all, y_all)
 
- ################# guay it gives back each row
+    ##INTERESTING: it gives the probability of the class estimated!!
     aa= random_forest.predict_proba(X_test)
 
     aa=pd.DataFrame(aa)

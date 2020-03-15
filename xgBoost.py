@@ -72,7 +72,7 @@ def xg_boost(X_train, X_test, y_train, y_test):
     model_xgb=model_xgb.fit(X_train, y_train)
 
     evaluate(model_xgb, X_test, y_test)'''
-    ##unisci test and train
+    ##join test and train
     X_all = X_train.append(X_test)
     y_all = y_train.append(y_test)
     model_xgb = model_xgb.fit(X_all, y_all)
